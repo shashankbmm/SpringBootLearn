@@ -41,7 +41,7 @@ pipeline {
                 sh """
                 docker stop shashankapp || true
                 docker rm shashankapp || true
-                docker run -d --name shashankapp -p 8080:8080 ${DOCKER_IMAGE}:${DOCKER_TAG}
+                docker run -d --name shashankapp -p 3006:8080 ${DOCKER_IMAGE}:${DOCKER_TAG}
                 """
             }
         }
